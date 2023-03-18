@@ -1,7 +1,9 @@
 package com.bridgelabz;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class AddressBook {
     Contact contact = new Contact();
+    ArrayList<Contact> con=new ArrayList<>();
     public void addContact() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the values of contact");
@@ -26,6 +28,13 @@ public class AddressBook {
         contact.setState(state);
         contact.setZip(zip);
         contact.setPhoneNumber(phoneNumber);
+        con.add(contact);
+    }
+    void display(){
+        for(int i=0;i<con.size();i++)
+        {
+            System.out.println(con.get(i));
+        }
     }
     @Override
     public String toString() {
