@@ -3,9 +3,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class AddressBook {
     Contact contact = new Contact();
+    static Scanner scanner = new Scanner(System.in);
     ArrayList<Contact> con=new ArrayList<>();
     public void addContact() {
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter the values of contact");
         System.out.println("Enter the First Name");
         String firstName = scanner.next();
