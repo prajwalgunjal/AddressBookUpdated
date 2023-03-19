@@ -9,8 +9,6 @@ public class Contact {
     private String email;
     private String zip;
     private String phoneNumber;
-
-
     public Contact(String firstName, String lastName, String address, String state, String city, String email, String zip, String phonenumber) {
         this.firstName = firstName;
         this.lastName = lastName;
