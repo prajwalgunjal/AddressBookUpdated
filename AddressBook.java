@@ -43,16 +43,12 @@ public class AddressBook {
             System.out.println("*************************");
         }
     }
-//    void delete() {
-//        System.out.println("Enter the first namr of the contact");
-//        String name = scanner.next();
-//        for (Contact contact : con) {
-//            if (contact.getFirstName().equals(name)) {
-//                con.remove(contact);
-//                System.out.println("Contact deleted");
-//            }
-//        }
-//    }
+    void delete() {
+        System.out.println("Enter the first namr of the contact");
+        String name = scanner.next();
+        con.removeIf(contact -> contact.getFirstName().equals(name));
+        System.out.println("Contact deleted");
+    }
     void edit(){
         System.out.println("Enter name of the person which you want to edit:");
         String edit = scanner.next();
@@ -60,19 +56,19 @@ public class AddressBook {
             if (contact.getFirstName().equals(edit))
             {
                 System.out.println("Enter the values of contact");
-                System.out.println("Enter the First Name");
+                System.out.print("Enter the First Name ");
                 String firstName = scanner.next();
-                System.out.println("Enter the Last Name");
+                System.out.print("Enter the Last Name ");
                 String lastName = scanner.next();
-                System.out.println("Enter the Address");
+                System.out.print("Enter the Address ");
                 String address = scanner.next();
-                System.out.println("Enter the City");
+                System.out.print("Enter the City ");
                 String city = scanner.next();
-                System.out.println("Enter the State");
+                System.out.print("Enter the State ");
                 String state = scanner.next();
-                System.out.println("Enter the zip");
+                System.out.print("Enter the zip ");
                 String zip = scanner.next();
-                System.out.println("Enter the Phone Number");
+                System.out.print("Enter the Phone Number ");
                 String phoneNumber = scanner.next();
                 contact.setFirstName(firstName);
                 contact.setLastName(lastName);
